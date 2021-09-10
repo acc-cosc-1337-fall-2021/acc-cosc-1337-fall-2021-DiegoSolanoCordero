@@ -11,7 +11,6 @@ Call multiply_numbers with 10 and 10 parameter values and display function resul
 */
 int main()
 {
-
 	int result;
 	int num;
 	int num1=4;
