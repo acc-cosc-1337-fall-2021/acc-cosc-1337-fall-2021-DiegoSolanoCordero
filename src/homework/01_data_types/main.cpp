@@ -14,7 +14,6 @@ int main()
 	int result;
 	int num;
 	int num1=4;
-
 	//Test 1 with multiply_number
 	cout<<"Enter a number and press enter: ";
 	cin>>num;
