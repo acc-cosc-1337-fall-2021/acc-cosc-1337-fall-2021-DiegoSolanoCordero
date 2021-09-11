@@ -23,5 +23,7 @@ int main()
 	
     //Test 2 with num1=4
 	result = multiply_numbers(num1);
-	cout<<"Your result using multiply_numbers with num1 is :"<<result<<"\n";	
+	cout<<"Your result using multiply_numbers with num1 is :"<<result<<"\n";
+	
+}	
 		
