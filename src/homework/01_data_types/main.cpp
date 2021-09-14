@@ -11,7 +11,6 @@ Call multiply_numbers with 10 and 10 parameter values and display function resul
 */
 int main()
 {
-
 	int result;
 	int num;
 	int num1=4;
@@ -25,6 +24,9 @@ int main()
 	
     //Test 2 with num1=4
 	result = multiply_numbers(num1);
-	cout<<"Your result using multiply_numbers with num1 is :"<<result<<"\n";	
-		
-};
+
+	cout<<"Your result using multiply_numbers with num1 is :"<<result<<"\n";
+
+	
+}
+
