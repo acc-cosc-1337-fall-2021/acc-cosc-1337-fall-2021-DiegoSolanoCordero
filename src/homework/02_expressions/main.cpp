@@ -10,18 +10,18 @@ Call multiply_numbers with 10 and 10 parameter values and display function resul
 */
 int main()
 {
-	double meal_ammount=0;//set initial variables to 0
-	double tip_rate=0;
-	double tip_ammount=0;
-	double tax_ammount=0;
-	double total=0;
+	double meal_ammount;//set initial variables to 0
+	double tip_rate;
+	double tip_ammount;
+	double tax_ammount;
+	double total;
 	cout<<"Enter your meal ammount: ";//Ask for meal ammount
 	cin>>meal_ammount;
-	double tax_ammount= get_sales_tax(meal_ammount);//Get the Sales Tax
+	tax_ammount= get_sales_tax(meal_ammount);//Get the Sales Tax
 	cout<<"Enter your tip rate (NO PERCENTAGE): ";//Ask for Tip rate
 	cin>>tip_rate;
-	double tip_ammount= get_tip_ammount(meal_ammount,tip_rate);//Get Tip ammount
-	double total= tip_ammount+tax_ammount+meal_ammount;//Get Total
+	tip_ammount= get_tip_ammount(meal_ammount,tip_rate); //Get Tip ammount
+	total= tip_ammount+tax_ammount+meal_ammount; //Get Total
 	cout<<"Your reciept would be :"<<"\n";//Give Reciept
 	cout<<"Meal Ammount :"<<meal_ammount<<"\n";
 	cout<<"Sales Tax :"<<tax_ammount<<"\n";
