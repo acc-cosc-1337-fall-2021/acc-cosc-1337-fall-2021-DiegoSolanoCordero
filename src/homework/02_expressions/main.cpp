@@ -10,7 +10,7 @@ Call multiply_numbers with 10 and 10 parameter values and display function resul
 */
 int main()
 {
-	double meal_ammount;//set initial variables to 0
+	double meal_ammount;//set initial variables
 	double tip_rate;
 	double tip_ammount;
 	double tax_ammount;
@@ -27,7 +27,5 @@ int main()
 	cout<<"Sales Tax :"<<tax_ammount<<"\n";
 	cout<<"Tip Ammount :"<<tip_ammount<<"\n";
 	cout<<"Total :"<<total<<"\n";
-
-
 	return 0;
 }
