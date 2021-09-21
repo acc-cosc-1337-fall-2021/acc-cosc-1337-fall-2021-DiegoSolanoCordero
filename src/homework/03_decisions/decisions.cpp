@@ -1,58 +1,48 @@
 //write include statement for decisions header
 #include "decisions.h"
-#include "iostream"
+#include <string>
 
-//Write code for function(s) code heres
-char get_letter_grade_using_if(int grade);
+//Write code for function(s) code here
+using std::string;
+
+string get_letter_grade_using_if(int grade);
 {
     if(grade >= 90 && grade <=100 )
-    {
-        return "A";
-    }
-    else if (grade >= 80 && grade <=89 );
-    {
-        return "B";
-    }
-    else if (grade >= 70 && grade <=79 );
-    {
-        return "C";
-    }
-    else if (grade >= 60 && grade <=69 );
-    {
-        return "D";
-    }
-    else if (grade >= 00 && grade <=59 );
-    {
-        return "F";
-    }
-    else;
-    {
-        return "Invalid grade";
-    }
+    return "A";
+    else if (grade >= 80 && grade <=89 )
+    return "B";
+    else if (grade >= 70 && grade <=79 )
+    return "C";
+    else if (grade >= 60 && grade <=69 )
+    return "D";
+    else if (grade >= 00 && grade <=59 )
+    return "F";
+    else 
+    return "Invalid grade";
 }
-char get_letter_grade_using_switch(int grade);
+using std::string; string get_letter_grade_using_switch(int grade);
 {
-    switch(int grade)
+    switch(int grade);
     {
         case grade >= 90 && grade <=100 : 
         return "A";
-        break;
+        break
         case grade >= 80 && grade <=89 :
         return "B";
-        break;
+        break
         case grade >= 70 && grade <=79 :
         return "C";
-        break;
-        case grade >= 60 && grade <=69:
+        break
+        case grade >= 60 && grade <=69 :
         return "D";
-        break;
+        break
         case grade >= 00 && grade <=59:
         return "F";
-        break;
+        break
         default:
         return "Invalid grade";
-        break;
+        break
 
     }
-    return result
+    return result;
 }
