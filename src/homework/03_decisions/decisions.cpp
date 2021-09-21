@@ -1,35 +1,36 @@
 //write include statement for decisions header
 #include "decisions.h"
+#include "iostream"
 
-//Write code for function(s) code here
-string get_letter_grade_using_if(int grade);
+//Write code for function(s) code heres
+char get_letter_grade_using_if(int grade);
 {
     if(grade >= 90 && grade <=100 )
     {
         return "A";
     }
-    else if (grade >= 80 && grade <=89 )
+    else if (grade >= 80 && grade <=89 );
     {
         return "B";
     }
-    else if (grade >= 70 && grade <=79 )
+    else if (grade >= 70 && grade <=79 );
     {
         return "C";
     }
-    else if (grade >= 60 && grade <=69 )
+    else if (grade >= 60 && grade <=69 );
     {
         return "D";
     }
-    else if (grade >= 00 && grade <=59 )
+    else if (grade >= 00 && grade <=59 );
     {
         return "F";
     }
-    else
+    else;
     {
         return "Invalid grade";
     }
 }
-string get_letter_grade_using_switch(int grade);
+char get_letter_grade_using_switch(int grade);
 {
     switch(int grade)
     {
