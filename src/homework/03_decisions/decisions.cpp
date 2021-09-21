@@ -4,8 +4,7 @@
 
 //Write code for function(s) code here
 using std::string;
-
-string get_letter_grade_using_if(int grade);
+string get_letter_grade_using_if(int grade)
 {
     if(grade >= 90 && grade <=100 )
     return "A";
@@ -20,7 +19,7 @@ string get_letter_grade_using_if(int grade);
     else 
     return "Invalid grade";
 }
-using std::string; string get_letter_grade_using_switch(int grade);
+string get_letter_grade_using_switch(int grade)
 {
     switch(int grade);
     {
