@@ -21,26 +21,26 @@ string get_letter_grade_using_if(int grade)
 }
 string get_letter_grade_using_switch(int grade)
 {
-    switch(int grade);
+    switch(grade)
     {
-        case grade >= 90 && grade <=100 : 
+        case 90...100 : 
         return "A";
-        break
-        case grade >= 80 && grade <=89 :
+        break;
+        case 80...89 :
         return "B";
-        break
-        case grade >= 70 && grade <=79 :
+        break;
+        case 70...79 :
         return "C";
-        break
-        case grade >= 60 && grade <=69 :
+        break;
+        case 60...69 :
         return "D";
-        break
-        case grade >= 00 && grade <=59:
+        break;
+        case 00...59 :
         return "F";
-        break
+        break;
         default:
         return "Invalid grade";
-        break
+        break;
 
     }
     return result;
