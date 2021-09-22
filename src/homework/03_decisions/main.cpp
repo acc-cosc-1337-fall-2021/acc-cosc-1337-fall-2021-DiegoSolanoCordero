@@ -30,7 +30,6 @@ int main()
 		default:
         cout<< "Invalid grade";
         break;
+	}
 
-	
-	return 0;
 }
