@@ -18,13 +18,13 @@ int main()
 	switch(Menu)
     {
         case 1: 
-        cout<<"Option 1 selected";
-		result= get_letter_grade_using_if(grade);
+        cout<<"Option 1 selected\n";
+		result= get_letter_grade_using_if(grade); //Call If Function
 		cout<<"Your grade would be:"<<result<<"\n";
         break;
         case 2:
-        cout<< "Option 2 selected";
-		result= get_letter_grade_using_switch(grade);
+        cout<< "Option 2 selected\n";
+		result= get_letter_grade_using_switch(grade); //Call Switch Function
 		cout<<"Your grade would be:"<<result<<"\n";
         break;
 		default:
