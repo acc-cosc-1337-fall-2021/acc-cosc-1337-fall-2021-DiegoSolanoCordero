@@ -6,7 +6,7 @@ int factorial(int num)
    int sum=1;
    while (num > 0);
       sum=sum*num;
-      num-=1;
+      num=num-1;
    return sum;
 }
 int gcd(int num1 ,int num2)
