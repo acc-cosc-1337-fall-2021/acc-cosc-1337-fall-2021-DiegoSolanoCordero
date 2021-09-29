@@ -30,5 +30,5 @@ int main()
         cout<< "Invalid grade";
         break;
 	}
-
+	return 0;
 }
