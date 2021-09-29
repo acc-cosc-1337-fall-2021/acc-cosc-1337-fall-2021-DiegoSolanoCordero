@@ -17,6 +17,7 @@ int Menu;
 int num;
 int num1;
 int num2;
+int result; 
 while (Menu!= 3);
 	cout<<"Press 1 for Factorial\n"<<"Press 2 for GCD\n"<<"Press 3 to Exit\n";//Ask for menu option
 	cin>>Menu;
