@@ -4,6 +4,7 @@
 TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
 }
+
 TEST_CASE("Factorial") 
 {
 	REQUIRE(factorial(3) == 6);
