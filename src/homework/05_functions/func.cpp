@@ -6,10 +6,9 @@
 using std::string;
 double get_gc_content (const std::string& dna)
 {
-    int i;
-    int gc=0;
+    int gc;
     
-    for (i=1; i<=8;++i)
+    for (int i=1; i<=8;++i)
     {
         std::string current= dna.substr(i,1);
         if (current == "C")
