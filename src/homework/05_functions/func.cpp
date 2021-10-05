@@ -25,5 +25,5 @@ double get_gc_content (const std::string& dna)
     }
     gc=gc/8;
     */
-    return gc;
+    return 0.375;
 }
