@@ -7,10 +7,11 @@ using std::string;
 double get_gc_content (const std::string& dna)
 {
     int i;
-    int gc;
-    std::string current= dna.substr(i,1);
+    int gc=0;
+    
     for (i=1; i<=8;++i)
     {
+        std::string current= dna.substr(i,1);
         if (current == "C")
         {
             gc=gc+1;
@@ -19,6 +20,7 @@ double get_gc_content (const std::string& dna)
         {
             gc=gc+1;
         }
+
     }
     gc=gc/8;
     return gc;
