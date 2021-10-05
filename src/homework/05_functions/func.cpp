@@ -7,16 +7,16 @@ using std::string;
 using std::cout;
 double get_gc_content (const std::string& dna)
 {
-    int gc=0;
-    
-    for (i=0; i<=8;++i)
+    int gc=2;
+    /*
+    for (int i=1; i<=8;++i)
     {
         std::string current= dna.substr(i,1);
         cout<<"Char"<<current;
         if (current == "C")
         {
             gc=gc+1;
-        }
+        
         if (current == "G")
         {
             gc=gc+1;
@@ -24,5 +24,6 @@ double get_gc_content (const std::string& dna)
 
     }
     gc=gc/8;
+    */
     return gc;
 }
