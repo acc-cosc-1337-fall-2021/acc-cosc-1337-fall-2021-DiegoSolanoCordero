@@ -8,14 +8,14 @@ double get_gc_content (const std::string& dna)
 {
     int i;
     int gc;
+    std::string current= dna.substr(i,1);
     for (i=1; i<=8;++i)
     {
-        std::string current= dna.substr(i,1);
         if (current == "C")
         {
             gc=gc+1;
         }
-           if (current == "G")
+        if (current == "G")
         {
             gc=gc+1;
         }
