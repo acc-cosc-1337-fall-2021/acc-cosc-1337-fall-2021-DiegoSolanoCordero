@@ -5,11 +5,11 @@ TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
 }
 
-//TEST_CASE("GC content") 
-//{
-	//REQUIRE(get_gc_content("AGCTATAG") == .375);
-	//REQUIRE(get_gc_content("CGCTATAG") == .50);
-//}
+TEST_CASE("GC content") 
+{
+	REQUIRE(get_gc_content("AGCTATAG") == .375);
+	REQUIRE(get_gc_content("CGCTATAG") == .50);
+}
 //TEST_CASE("Reverse") 
 //{
 	//REQUIRE(reverse_string("AGCTATAG") == "GATATCGA");
