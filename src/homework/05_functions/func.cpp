@@ -4,13 +4,15 @@
 #include "iostream"
 //add function code here
 using std::string;
+using std::cout;
 double get_gc_content (const std::string& dna)
 {
-    int gc;
+    int gc=0;
     
-    for (int i=1; i<=8;++i)
+    for (i=0; i<=8;++i)
     {
         std::string current= dna.substr(i,1);
+        cout<<"Char"<<current;
         if (current == "C")
         {
             gc=gc+1;
