@@ -4,26 +4,44 @@
 #include "iostream"
 //add function code here
 using std::string;
-using std::cout;
 double get_gc_content (const std::string& dna)
 {
-    int gc=2;
-    /*
-    for (int i=1; i<=8;++i)
+    double gc=0;
+    int i;
+    for (int i=0; i<dna.size();++i)
     {
-        std::string current= dna.substr(i,1);
-        cout<<"Char"<<current;
-        if (current == "C")
-        {
-            gc=gc+1;
-        
-        if (current == "G")
+        if (dna[i] == 'C'|| dna[i] == 'G') 
         {
             gc=gc+1;
         }
-
     }
-    gc=gc/8;
-    */
-    return 0.375;
+    gc=gc/dna.size();
+    return gc;
+}
+string get_dna_complement (std::string dna)
+{
+    string complement;
+    int i;
+    for (int i=0; i<dna.size();++i)
+    { 
+        complement.append(dna[i]);
+    }
+    return complement;
+}
+string reverse_string (std::string dna)
+{
+    string reverse;
+     int i;
+    for (int i=0; i<dna.size();++i)
+    {
+     if (dna[i] == 'A')
+     reverse.append('T');
+     if (dna[i] == 'T')
+     reverse.append('A');
+     if (dna[i] == 'G')
+     reverse.append('C');
+     if (dna[i] == 'C')
+     reverse.append('G');
+    }   
+    return reverse;
 }
