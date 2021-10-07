@@ -13,11 +13,13 @@ Program continues until user decides to exit.
 using std::string;
 using std::cin;
 using std::cout;
+string dna;
 int main()
 {
+	cout<<"Enter your Strand of DNA: ";//Ask for strand
+			cin>>dna;
 	int Menu;
 	double GCresult;
-	string dna;
 	string Complementresult;
 	while (Menu!= 3)
 	{
@@ -27,15 +29,11 @@ int main()
 		{
 			case 1:
 			cout<<"Option 1 selected\n";
-			cout<<"Enter your Strand of DNA: ";//Ask for strand
-			cin>>dna;
 			GCresult=get_gc_content (dna);
 			cout<<"The GC content would be :"<<GCresult<<"\n";
 			break;
 			case 2:
 			cout<<"Option 2 selected\n";
-			cout<<"Enter your Strand of DNA: ";//Ask for strand
-			cin>>dna;
 			dna=reverse_string (dna);
 			Complementresult=get_dna_complement (dna);
 			cout<<"The Reverse Complement would be :"<<Complementresult<<"\n";

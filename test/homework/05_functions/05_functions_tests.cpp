@@ -15,8 +15,10 @@ TEST_CASE("Reverse")
 	REQUIRE(reverse_string("AGCTATAG") == "GATATCGA");
 	REQUIRE(reverse_string("CGCTATAG") == "GATATCGC");
 }
+
 TEST_CASE("Complement") 
 {
 	REQUIRE(get_dna_complement("AAAACCCGGT") == "ACCGGGTTTT");
 	REQUIRE(get_dna_complement("CCCGGAAAAT") == "ATTTTCCGGG");
 }
+

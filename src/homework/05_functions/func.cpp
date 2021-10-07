@@ -18,30 +18,31 @@ double get_gc_content (const std::string& dna)
     gc=gc/dna.size();
     return gc;
 }
-string get_dna_complement (std::string dna)
-{
-    string complement;
-    int i;
-    for (int i=0; i<dna.size();++i)
-    { 
-        complement.append(dna[i]);
-    }
-    return complement;
-}
 string reverse_string (std::string dna)
 {
     string reverse;
-     int i;
+    int i;
+    for (int i=0; i<dna.size();++i)
+    { 
+        reverse=(dna[i]+reverse);
+    }
+    return reverse;
+}
+string get_dna_complement (std::string dna)
+{
+    dna=reverse_string (dna);
+    string complement="";
+    int i;
     for (int i=0; i<dna.size();++i)
     {
-     if (dna[i] == 'A')
-     reverse.append('T');
-     if (dna[i] == 'T')
-     reverse.append('A');
-     if (dna[i] == 'G')
-     reverse.append('C');
-     if (dna[i] == 'C')
-     reverse.append('G');
+        if (dna[i] == 'A')
+        complement=complement + "T";
+        if (dna[i] == 'T')
+        complement=complement +('A');
+        if (dna[i] == 'G')
+        complement=complement +('C');
+        if (dna[i] == 'C')
+        complement=complement +('G');
     }   
-    return reverse;
+    return complement;
 }
