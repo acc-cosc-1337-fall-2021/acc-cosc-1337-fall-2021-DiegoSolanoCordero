@@ -22,7 +22,6 @@ void TicTacToe::mark_board(int position)
     int current=position-1;
     pegs[current]= get_player();
     set_next_player();
-    cout<<current<<"\n";
 }
 //Return player value
 string TicTacToe::get_player() const
