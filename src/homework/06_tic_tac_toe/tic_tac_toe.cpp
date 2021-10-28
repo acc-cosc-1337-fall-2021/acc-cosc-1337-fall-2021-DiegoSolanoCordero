@@ -17,21 +17,25 @@ bool TicTacToe::game_over()
     {
         true_check=check1;
         cout<<"A column is full"<<"\n";
+        set_winner();
     }
     else if (check2==true)
     {
         true_check=check2;
         cout<<"A row is full"<<"\n";
+        set_winner();
     }
     else if (check3==true)
     {
         true_check=check3;
         cout<<"A diagonal is full"<<"\n";
+        set_winner();
     }
     else if (check4==true)
     {
         true_check=check4;
         cout<<"Board is full"<<"\n";
+        winner="C";
     }
     return true_check;
     //return check_board_full();
@@ -101,24 +105,20 @@ void TicTacToe::clear_board()
 bool TicTacToe:: check_column_win()
 {
     bool column=false;
-    if (pegs[0]=="X" && pegs[3]=="X" && pegs[6]=="X")
+    if (pegs[0]=="X" && pegs[3]=="X" && pegs[6]=="X"||pegs[0]=="O" && pegs[3]=="O" && pegs[6]=="O")
     {
-        cout<<"column 1 checked"<<"\n";
         column=true;
     }
-    else if (pegs[1]=="X" && pegs[4]=="X" && pegs[7]=="X")
+    else if (pegs[1]=="X" && pegs[4]=="X" && pegs[7]=="X"||pegs[1]=="O" && pegs[4]=="O" && pegs[7]=="O")
     {
-        cout<<"column 2 checked"<<"\n";
         column=true;
     }
-    else if (pegs[2]=="X" && pegs[5]=="X" && pegs[8]=="X")
+    else if (pegs[2]=="X" && pegs[5]=="X" && pegs[8]=="X"||pegs[2]=="O" && pegs[5]=="O" && pegs[8]=="O")
     {
-        cout<<"column 3 checked"<<"\n";
         column=true;
     }
     else
     {
-        cout<<"non true"<<"\n";
         column=false;
     }
     return column;
@@ -128,24 +128,20 @@ bool TicTacToe:: check_column_win()
 bool TicTacToe:: check_row_win()
 {
     bool row=false;
-    if (pegs[0]=="X" && pegs[1]=="X" && pegs[2]=="X")
+    if (pegs[0]=="X" && pegs[1]=="X" && pegs[2]=="X"||pegs[0]=="O" && pegs[1]=="O" && pegs[2]=="O")
     {
-        cout<<"row 1 checked"<<"\n";
         row=true;
     }
-    else if (pegs[3]=="X" && pegs[4]=="X" && pegs[5]=="X")
+    else if (pegs[3]=="X" && pegs[4]=="X" && pegs[5]=="X"||pegs[3]=="O" && pegs[4]=="O" && pegs[5]=="O")
     {
-        cout<<"row 2 checked"<<"\n";
         row=true;
     }
-    else if (pegs[6]=="X" && pegs[7]=="X" && pegs[8]=="X")
+    else if (pegs[6]=="X" && pegs[7]=="X" && pegs[8]=="X"||pegs[6]=="O" && pegs[7]=="O" && pegs[8]=="O")
     {
-        cout<<"row 3 checked"<<"\n";
         row=true;
     }
     else
     {
-        cout<<"non true"<<"\n";
         row=false;
     }
     return row;
@@ -154,19 +150,16 @@ bool TicTacToe:: check_row_win()
 bool TicTacToe:: check_diagonal_win()
 {
     bool diagonal=false;
-    if (pegs[0]=="X" && pegs[4]=="X" && pegs[8]=="X")
+    if (pegs[0]=="X" && pegs[4]=="X" && pegs[8]=="X"||pegs[0]=="O" && pegs[4]=="O" && pegs[8]=="O")
     {
-        cout<<"diagonal 1 checked"<<"\n";
         diagonal=true;
     }
-    else if (pegs[2]=="X" && pegs[4]=="X" && pegs[6]=="X")
+    else if (pegs[2]=="X" && pegs[4]=="X" && pegs[6]=="X"||pegs[2]=="O" && pegs[4]=="O" && pegs[6]=="O")
     {
-        cout<<"diagonal 2 checked"<<"\n";
         diagonal=true;
     }
     else
     {
-        cout<<"non true"<<"\n";
         diagonal=false;
     }
     return diagonal;
