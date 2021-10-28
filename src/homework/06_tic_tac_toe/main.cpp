@@ -18,10 +18,12 @@ int main()
 		cout<<"Press X or O for the first player's turn"<<"\n";
 		cin>>first_player;
 		instance.start_game(first_player);
+		cout<<"looping"<<"\n";
 		instance.display_board();
-		while (getout!=true)
+		getout=false;
+		while (getout==false)
 		{
-			cout<<"Player:"<<instance.get_player()<<"'s turn,Select a space to fill from 1 to 9"<<"\n";
+			cout<<"Player:"<<instance.get_player()<<"'s turn, Select a space to fill from 1 to 9"<<"\n";
 			cin>>position;
 			//cout<<"mark_board"<<"\n";
 			instance.mark_board(position); 
