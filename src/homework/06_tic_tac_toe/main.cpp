@@ -12,13 +12,26 @@ int main()
 	int loop=0;
 	int repeat=1;
 	bool getout=false;
+	std::string winner;
 	TicTacToe instance;
 	while (repeat==1)
 	{
-		cout<<"Press X or O for the first player's turn"<<"\n";
-		cin>>first_player;
+		int input_player=1;
+		while (input_player==1)
+		{
+			cout<<"Press X or O for the first player's turn"<<"\n";
+			cin>>first_player;
+			if (first_player=="X"||first_player=="O"||first_player=="x"||first_player=="o")
+			{
+				input_player=2;
+			}
+			else
+			{
+				cout<<"That is not a valid player, please try again"<<"\n";
+				input_player=1;
+			}	
+		}
 		instance.start_game(first_player);
-		cout<<"looping"<<"\n";
 		instance.display_board();
 		getout=false;
 		while (getout==false)
@@ -31,6 +44,11 @@ int main()
 			instance.display_board();
 			getout=instance.game_over();
 		}
+		winner=instance.get_winner();
+		if (winner=="C")
+		cout<<"It's a tie!"<<"\n";
+		else
+		cout<<"The Winner is: player "<<(winner)<<"!"<<"\n";
 		cout<<"Game over, press 1 to play again, 2 to exit"<<"\n";
 		cin>>repeat;
 	}
