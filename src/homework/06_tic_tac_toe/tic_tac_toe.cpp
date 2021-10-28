@@ -8,7 +8,7 @@ using std::cout;
 //return check_board_full function return value
 bool TicTacToe::game_over()
 {
-    /*bool check;
+    bool check;
     check=check_column_win();
     if (check=true)
     return check;
@@ -20,7 +20,7 @@ bool TicTacToe::game_over()
     check=check_diagonal_win();
     if (check=true)
     return check;
-    else*/
+    else
     return check_board_full();
 }
 //set first player value to player
@@ -91,9 +91,9 @@ void TicTacToe::clear_board()
 //Check for column winners
 bool TicTacToe:: check_column_win()
 {
-    if (pegs[0]=="X" && pegs[3]=="X" && pegs[6]=="X" ||pegs[1]=="X" && pegs[4]=="X" && pegs[7]=="X"||pegs[2]=="X" && pegs[5]=="X" && pegs[8]=="X")
+    if (pegs[0]=="X" & pegs[3]=="X" & pegs[6]=="X" ||pegs[1]=="X" & pegs[4]=="X" & pegs[7]=="X"||pegs[2]=="X" & pegs[5]=="X" & pegs[8]=="X")
     return true;
-    else if (pegs[0]=="O" && pegs[3]=="O" && pegs[6]=="O" ||pegs[1]=="O" && pegs[4]=="O" && pegs[7]=="O"||pegs[2]=="O" && pegs[5]=="O" && pegs[8]=="O")
+    else if (pegs[0]=="O" & pegs[3]=="O" & pegs[6]=="O" ||pegs[1]=="O" & pegs[4]=="O" & pegs[7]=="O"||pegs[2]=="O" & pegs[5]=="O" & pegs[8]=="O")
     return true;
     else
     return false;
@@ -102,9 +102,9 @@ bool TicTacToe:: check_column_win()
 //Check for row winners
 bool TicTacToe:: check_row_win()
 {
-    if (pegs[0]=="X" && pegs[1]=="X" && pegs[2]=="X" ||pegs[3]=="X" && pegs[4]=="X" && pegs[5]=="X"||pegs[6]=="X" && pegs[7]=="X" && pegs[8]=="X")
+    if (pegs[0]=="X" & pegs[1]=="X" & pegs[2]=="X" ||pegs[3]=="X" & pegs[4]=="X" & pegs[5]=="X"||pegs[6]=="X" & pegs[7]=="X" & pegs[8]=="X")
     return true;
-    else if (pegs[0]=="O" && pegs[1]=="O" && pegs[2]=="O" ||pegs[3]=="O" && pegs[4]=="O" && pegs[5]=="O"||pegs[6]=="O" && pegs[7]=="O" && pegs[8]=="O")
+    else if (pegs[0]=="O" & pegs[1]=="O" & pegs[2]=="O" ||pegs[3]=="O" & pegs[4]=="O" & pegs[5]=="O"||pegs[6]=="O" & pegs[7]=="O" & pegs[8]=="O")
     return true;
     else
     return false;
@@ -113,9 +113,9 @@ bool TicTacToe:: check_row_win()
 //Check for diagonal winners
 bool TicTacToe:: check_diagonal_win()
 {
-    if (pegs[0]=="X" && pegs[4]=="X" && pegs[8]=="X" ||pegs[6]=="X" && pegs[4]=="X" && pegs[2]=="X")
+    if (pegs[0]=="X" & pegs[4]=="X" & pegs[8]=="X" ||pegs[6]=="X" & pegs[4]=="X" & pegs[2]=="X")
     return true;
-    else if (pegs[0]=="O" && pegs[4]=="O" && pegs[8]=="O" ||pegs[6]=="O" && pegs[4]=="O" && pegs[2]=="O")
+    else if (pegs[0]=="O" & pegs[4]=="O" & pegs[8]=="O" ||pegs[6]=="O" & pegs[4]=="O" & pegs[2]=="O")
     return true;
     else
     return false;
