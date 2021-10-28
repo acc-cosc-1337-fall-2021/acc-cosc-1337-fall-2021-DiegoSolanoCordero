@@ -118,5 +118,66 @@ TEST_CASE("Win by column 3")
 	REQUIRE(instance.game_over()==true);
 	REQUIRE(instance.get_winner()=="X");
 }
-
-
+TEST_CASE("Win by row 1") 
+{
+	TicTacToe instance;
+	do
+	{
+		instance.start_game("X");
+		instance.mark_board(1);
+		instance.game_over();
+		instance.mark_board(4);
+		instance.game_over();
+		instance.mark_board(2);
+		instance.game_over();
+		instance.mark_board(5);
+		instance.game_over();
+		instance.mark_board(3);
+		instance.game_over();
+		instance.display_board();
+	} while (instance.game_over()==false);
+	REQUIRE(instance.game_over()==true);
+	REQUIRE(instance.get_winner()=="X");
+}
+TEST_CASE("Win by row 2") 
+{
+	TicTacToe instance;
+	do
+	{
+		instance.start_game("X");
+		instance.mark_board(4);
+		instance.game_over();
+		instance.mark_board(1);
+		instance.game_over();
+		instance.mark_board(5);
+		instance.game_over();
+		instance.mark_board(2);
+		instance.game_over();
+		instance.mark_board(6);
+		instance.game_over();
+		instance.display_board();
+	} while (instance.game_over()==false);
+	REQUIRE(instance.game_over()==true);
+	REQUIRE(instance.get_winner()=="X");
+}
+TEST_CASE("Win by row 3") 
+{
+	TicTacToe instance;
+	do
+	{
+		instance.start_game("X");
+		instance.mark_board(7);
+		instance.game_over();
+		instance.mark_board(4);
+		instance.game_over();
+		instance.mark_board(8);
+		instance.game_over();
+		instance.mark_board(5);
+		instance.game_over();
+		instance.mark_board(9);
+		instance.game_over();
+		instance.display_board();
+	} while (instance.game_over()==false);
+	REQUIRE(instance.game_over()==true);
+	REQUIRE(instance.get_winner()=="X");
+}
