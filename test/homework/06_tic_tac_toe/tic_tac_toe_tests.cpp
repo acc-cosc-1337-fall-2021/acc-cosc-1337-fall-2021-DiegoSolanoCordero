@@ -1,6 +1,7 @@
 #define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
 #include "catch.hpp"
 #include "tic_tac_toe.h"
+#include "tic_tac_toe_manager.h"
 #include "iostream"
 TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
@@ -14,48 +15,39 @@ TEST_CASE("Tie")
 	{
 		instance.start_game("X");
 		instance.mark_board(1);
-		REQUIRE(instance.game_over()==false);
-		instance.display_board();
+		cout<<instance;
 		check=check+1;
 		instance.game_over();
 		instance.mark_board(2);
-		REQUIRE(instance.game_over()==false);
-		instance.display_board();
+		cout<<instance;
 		check=check+1;
 		instance.game_over();
 		instance.mark_board(3);
-		REQUIRE(instance.game_over()==false);
-		instance.display_board();
+		cout<<instance;
 		check=check+1;
 		instance.game_over();
 		instance.mark_board(4);
-		REQUIRE(instance.game_over()==false);
-		instance.display_board();
+		cout<<instance;
 		check=check+1;
 		instance.game_over();
 		instance.mark_board(5);
-		REQUIRE(instance.game_over()==false);
-		instance.display_board();
+		cout<<instance;
 		check=check+1;
 		instance.game_over();
 		instance.mark_board(7);
-		REQUIRE(instance.game_over()==false);
-		instance.display_board();
+		cout<<instance;
 		check=check+1;
 		instance.game_over();
 		instance.mark_board(6);
-		REQUIRE(instance.game_over()==false);
-		instance.display_board();
+		cout<<instance;
 		check=check+1;
 		instance.game_over();
 		instance.mark_board(9);
-		REQUIRE(instance.game_over()==false);
-		instance.display_board();
+		cout<<instance;
 		check=check+1;
 		instance.game_over();
 		instance.mark_board(8);
-		REQUIRE(instance.game_over()==false);
-		instance.display_board();
+		cout<<instance;
 		check=check+1;
 		instance.game_over();
 		cout<<"number of game over checks: "<<check<<"\n";
@@ -72,21 +64,16 @@ TEST_CASE("Win by column 1")
 	{
 		instance.start_game("X");
 		instance.mark_board(1);
-		REQUIRE(instance.game_over()==false);
 		instance.game_over();
 		instance.mark_board(2);
-		REQUIRE(instance.game_over()==false);
 		instance.game_over();
 		instance.mark_board(4);
-		REQUIRE(instance.game_over()==false);
 		instance.game_over();
 		instance.mark_board(3);
-		REQUIRE(instance.game_over()==false);
 		instance.game_over();
 		instance.mark_board(7);
-		REQUIRE(instance.game_over()==false);
 		instance.game_over();
-		instance.display_board();
+		cout<<instance;
 	} while (instance.game_over()==false);
 	REQUIRE(instance.game_over()==true);
 	REQUIRE(instance.get_winner()=="X");
@@ -100,21 +87,16 @@ TEST_CASE("Win by column 2")
 	{
 		instance.start_game("X");
 		instance.mark_board(2);
-		REQUIRE(instance.game_over()==false);
 		instance.game_over();
 		instance.mark_board(1);
-		REQUIRE(instance.game_over()==false);
 		instance.game_over();
 		instance.mark_board(5);
-		REQUIRE(instance.game_over()==false);
 		instance.game_over();
 		instance.mark_board(4);
-		REQUIRE(instance.game_over()==false);
 		instance.game_over();
 		instance.mark_board(8);
-		REQUIRE(instance.game_over()==false);
 		instance.game_over();
-		instance.display_board();
+		cout<<instance;
 	} while (instance.game_over()==false);
 	REQUIRE(instance.game_over()==true);
 	REQUIRE(instance.get_winner()=="X");
@@ -128,21 +110,16 @@ TEST_CASE("Win by column 3")
 	{
 		instance.start_game("X");
 		instance.mark_board(3);
-		REQUIRE(instance.game_over()==false);
 		instance.game_over();
 		instance.mark_board(1);
-		REQUIRE(instance.game_over()==false);
 		instance.game_over();
 		instance.mark_board(6);
-		REQUIRE(instance.game_over()==false);
 		instance.game_over();
 		instance.mark_board(4);
-		REQUIRE(instance.game_over()==false);
 		instance.game_over();
 		instance.mark_board(9);
-		REQUIRE(instance.game_over()==false);
 		instance.game_over();
-		instance.display_board();
+		cout<<instance;
 	} while (instance.game_over()==false);
 	REQUIRE(instance.game_over()==true);
 	REQUIRE(instance.get_winner()=="X");
@@ -156,21 +133,16 @@ TEST_CASE("Win by row 1")
 	{
 		instance.start_game("X");
 		instance.mark_board(1);
-		REQUIRE(instance.game_over()==false);
 		instance.game_over();
 		instance.mark_board(4);
-		REQUIRE(instance.game_over()==false);
 		instance.game_over();
 		instance.mark_board(2);
-		REQUIRE(instance.game_over()==false);
 		instance.game_over();
 		instance.mark_board(5);
-		REQUIRE(instance.game_over()==false);
 		instance.game_over();
 		instance.mark_board(3);
-		REQUIRE(instance.game_over()==false);
 		instance.game_over();
-		instance.display_board();
+		cout<<instance;
 	} while (instance.game_over()==false);
 	REQUIRE(instance.game_over()==true);
 	REQUIRE(instance.get_winner()=="X");
@@ -184,21 +156,16 @@ TEST_CASE("Win by row 2")
 	{
 		instance.start_game("X");
 		instance.mark_board(4);
-		REQUIRE(instance.game_over()==false);
 		instance.game_over();
 		instance.mark_board(1);
-		REQUIRE(instance.game_over()==false);
 		instance.game_over();
 		instance.mark_board(5);
-		REQUIRE(instance.game_over()==false);
 		instance.game_over();
 		instance.mark_board(2);
-		REQUIRE(instance.game_over()==false);
 		instance.game_over();
 		instance.mark_board(6);
-		REQUIRE(instance.game_over()==false);
 		instance.game_over();
-		instance.display_board();
+		cout<<instance;
 	} while (instance.game_over()==false);
 	REQUIRE(instance.game_over()==true);
 	REQUIRE(instance.get_winner()=="X");
@@ -212,21 +179,16 @@ TEST_CASE("Win by row 3")
 	{
 		instance.start_game("X");
 		instance.mark_board(7);
-		REQUIRE(instance.game_over()==false);
 		instance.game_over();
 		instance.mark_board(4);
-		REQUIRE(instance.game_over()==false);
 		instance.game_over();
 		instance.mark_board(8);
-		REQUIRE(instance.game_over()==false);
 		instance.game_over();
 		instance.mark_board(5);
-		REQUIRE(instance.game_over()==false);
 		instance.game_over();
 		instance.mark_board(9);
-		REQUIRE(instance.game_over()==false);
 		instance.game_over();
-		instance.display_board();
+		cout<<instance;
 	} while (instance.game_over()==false);
 	REQUIRE(instance.game_over()==true);
 	REQUIRE(instance.get_winner()=="X");
@@ -240,21 +202,16 @@ TEST_CASE("Win by top left diagonal")
 	{
 		instance.start_game("X");
 		instance.mark_board(1);
-		REQUIRE(instance.game_over()==false);
 		instance.game_over();
 		instance.mark_board(4);
-		REQUIRE(instance.game_over()==false);
 		instance.game_over();
 		instance.mark_board(5);
-		REQUIRE(instance.game_over()==false);
 		instance.game_over();
 		instance.mark_board(6);
-		REQUIRE(instance.game_over()==false);
 		instance.game_over();
 		instance.mark_board(9);
-		REQUIRE(instance.game_over()==false);
 		instance.game_over();
-		instance.display_board();
+		cout<<instance;
 	} while (instance.game_over()==false);
 	REQUIRE(instance.game_over()==true);
 	REQUIRE(instance.get_winner()=="X");
@@ -268,24 +225,88 @@ TEST_CASE("Win by bottom left diagonal")
 	{
 		instance.start_game("X");
 		instance.mark_board(7);
-		REQUIRE(instance.game_over()==false);
 		instance.game_over();
 		instance.mark_board(4);
-		REQUIRE(instance.game_over()==false);
 		instance.game_over();
 		instance.mark_board(5);
-		REQUIRE(instance.game_over()==false);
 		instance.game_over();
 		instance.mark_board(6);
-		REQUIRE(instance.game_over()==false);
 		instance.game_over();
 		instance.mark_board(3);
-		REQUIRE(instance.game_over()==false);
 		instance.game_over();
-		instance.display_board();
+		cout<<instance;
 	} while (instance.game_over()==false);
 	REQUIRE(instance.game_over()==true);
 	REQUIRE(instance.get_winner()=="X");
+	cout<<"Test complete: "<<"\n";
+	cout<<"\n";
+}
+TEST_CASE("Winner total Manager check") 
+{
+	TicTacToe instance;
+	TicTacToeManager instance2;
+	do
+	{
+		instance.start_game("X");
+		instance.mark_board(1);
+		instance.game_over();
+		instance.mark_board(4);
+		instance.game_over();
+		instance.mark_board(2);
+		instance.game_over();
+		instance.mark_board(5);
+		instance.game_over();
+		instance.mark_board(3);
+		instance.game_over();
+		cout<<instance;
+	} while (instance.game_over()==false);
+	instance2.save_game(instance);
+	do
+	{
+		instance.start_game("O");
+		instance.mark_board(1);
+		instance.game_over();
+		instance.mark_board(4);
+		instance.game_over();
+		instance.mark_board(2);
+		instance.game_over();
+		instance.mark_board(5);
+		instance.game_over();
+		instance.mark_board(3);
+		instance.game_over();
+		cout<<instance;
+	} while (instance.game_over()==false);
+	instance2.save_game(instance);
+	do
+	{
+		instance.start_game("X");
+		instance.mark_board(1);
+		instance.game_over();
+		instance.mark_board(2);
+		instance.game_over();
+		instance.mark_board(3);
+		instance.game_over();
+		instance.mark_board(4);
+		instance.game_over();
+		instance.mark_board(5);
+		instance.game_over();
+		instance.mark_board(7);
+		instance.game_over();
+		instance.mark_board(6);
+		instance.game_over();
+		instance.mark_board(9);
+		instance.game_over();
+		instance.mark_board(8);
+		instance.game_over();
+		cout<<instance;
+	} while (instance.game_over()==false);
+	instance2.save_game(instance);
+	int x;
+	int o;
+	int t;
+	instance2.get_winner_total(x,o,t);
+	cout<<"X wins: "<<x<<"O wins: "<<o<<"Ties: "<<t<<"\n";
+	REQUIRE(instance.game_over()==true);
 	cout<<"Test complete: "<<"\n";
 	cout<<"\n";
 }

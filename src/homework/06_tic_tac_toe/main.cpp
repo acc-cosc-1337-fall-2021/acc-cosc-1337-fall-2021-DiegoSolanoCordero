@@ -2,18 +2,19 @@
 #include <vector>
 #include "iostream"
 #include "tic_tac_toe.h"
+#include "tic_tac_toe_manager.h"
 using std::string;
 using std::cout;
 using std::cin;
 int main() 
 {
 	std::string first_player;
-	int position;
 	int loop=0;
 	int repeat=1;
 	bool getout=false;
 	std::string winner;
 	TicTacToe instance;
+	TicTacToeManager instance2;
 	while (repeat==1)
 	{
 		int input_player=1;
@@ -32,16 +33,13 @@ int main()
 			}	
 		}
 		instance.start_game(first_player);
-		instance.display_board();
+		cout<<instance;
 		getout=false;
 		while (getout==false)
 		{
 			cout<<"Player:"<<instance.get_player()<<"'s turn, Select a space to fill from 1 to 9"<<"\n";
-			cin>>position;
-			//cout<<"mark_board"<<"\n";
-			instance.mark_board(position); 
-			//cout<<"display_board"<<"\n";
-			instance.display_board();
+			cin>>instance;
+			cout<<instance;
 			getout=instance.game_over();
 		}
 		winner=instance.get_winner();
@@ -49,9 +47,17 @@ int main()
 		cout<<"It's a tie!"<<"\n";
 		else
 		cout<<"The Winner is: player "<<(winner)<<"!"<<"\n";
+		instance2.save_game(instance);
+		int x;
+		int o;
+		int t;
+		instance2.get_winner_total(x,o,t);
+		cout<<"X wins: "<<x<<", O wins: "<<o<<", Ties: "<<t<<"\n";
 		cout<<"Game over, press 1 to play again, 2 to exit"<<"\n";
-		cin>>repeat;
+		cin>>repeat;	
 	}
+	cout<<"Games played: "<<"\n";
+	cout<<instance2;
 	cout<<"Program ended"<<"\n";
 	return 0;
 }

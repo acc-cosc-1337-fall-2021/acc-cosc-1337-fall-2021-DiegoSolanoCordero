@@ -3,9 +3,13 @@
 #include <vector>
 #include "iostream"
 #include "tic_tac_toe.h"
+using namespace std;
 using std::string;
 using std::cout;
+using std::ostream;
+using std::istream;
 //return check_board_full function return value
+
 bool TicTacToe::game_over()
 {
     bool true_check=false;
@@ -61,13 +65,6 @@ string TicTacToe::get_player() const
 {
     return player;
 }
-//Iterate and display vectors
-void TicTacToe::display_board() const
-{
-    cout<<"["<<pegs[0]<<"]"<<"["<<pegs[1]<<"]"<<"["<<pegs[2]<<"]"<<"\n";
-    cout<<"["<<pegs[3]<<"]"<<"["<<pegs[4]<<"]"<<"["<<pegs[5]<<"]"<<"\n";
-    cout<<"["<<pegs[6]<<"]"<<"["<<pegs[7]<<"]"<<"["<<pegs[8]<<"]"<<"\n";
-}
 // Find winner
 string TicTacToe::get_winner()
 {
@@ -80,6 +77,23 @@ void TicTacToe::set_next_player()
     player="O";
     else if (player=="O" || player=="o")
     player="X";
+}
+
+std::ostream& operator<<(std::ostream& out, const TicTacToe& game)
+{
+    out<<"["<<game.pegs[0]<<"]"<<"["<<game.pegs[1]<<"]"<<"["<<game.pegs[2]<<"]"<<"\n";
+    out<<"["<<game.pegs[3]<<"]"<<"["<<game.pegs[4]<<"]"<<"["<<game.pegs[5]<<"]"<<"\n";
+    out<<"["<<game.pegs[6]<<"]"<<"["<<game.pegs[7]<<"]"<<"["<<game.pegs[8]<<"]"<<"\n";
+    return out;
+}
+
+std::istream& operator>>(std::istream& in, TicTacToe& game)
+{
+    int position;
+    cout<<"Choose a space between 1 and 9"<<"\n";
+    in>>position;
+    game.mark_board(position);
+    return in;
 }
 //Check if the board is full
 bool TicTacToe::check_board_full()
