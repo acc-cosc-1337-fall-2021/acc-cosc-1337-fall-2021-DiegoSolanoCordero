@@ -290,13 +290,13 @@ TEST_CASE("Winner total Manager check")
 		instance.game_over();
 		instance.mark_board(5);
 		instance.game_over();
-		instance.mark_board(6);
-		instance.game_over();
-		instance.mark_board(8);
-		instance.game_over();
 		instance.mark_board(7);
 		instance.game_over();
+		instance.mark_board(6);
+		instance.game_over();
 		instance.mark_board(9);
+		instance.game_over();
+		instance.mark_board(8);
 		instance.game_over();
 		cout<<instance;
 	} while (instance.game_over()==false);
@@ -305,7 +305,7 @@ TEST_CASE("Winner total Manager check")
 	int o;
 	int t;
 	instance2.get_winner_total(x,o,t);
-	cout<<"X wins: "<<x<<"O wins: "<<o<<"Ties: "<<t<<"\n";
+	cout<<"X wins: "<<x<<", O wins: "<<o<<", Ties: "<<t<<"\n";
 	REQUIRE(instance.game_over()==true);
 	cout<<"Test complete: "<<"\n";
 	cout<<"\n";
