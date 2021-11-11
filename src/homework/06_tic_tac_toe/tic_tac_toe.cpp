@@ -123,7 +123,7 @@ bool TicTacToe::check_board_full()
 //Set all board to empty space
 void TicTacToe::clear_board()
 {
-    pegs= std::vector<std::string>(9," ");
+    pegs= std::vector<std::string>(9," "); 
 }
 //Check for column winners
 bool TicTacToe:: check_column_win()
