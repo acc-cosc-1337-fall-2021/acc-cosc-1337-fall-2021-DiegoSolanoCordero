@@ -7,8 +7,8 @@ using std::string;
 using std::vector;
 using std::ostream;
 using std::istream;
-#ifndef Tictactoe_H
-#define Tictactoe_H
+#ifndef TicTacToe_H
+#define TicTacToe_H
 class TicTacToe
 {
     

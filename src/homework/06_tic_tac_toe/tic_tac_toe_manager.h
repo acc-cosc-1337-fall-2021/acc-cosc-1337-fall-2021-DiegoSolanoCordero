@@ -9,6 +9,8 @@ using std::vector;
 using std::ostream;
 using std::istream;
 using std::unique_ptr;
+#ifndef TicTacToeManager_H
+#define TicTacToeManager_H
 class TicTacToeManager
 {
     public:
@@ -23,3 +25,4 @@ class TicTacToeManager
         int ties=0;
         
 };
+#endif

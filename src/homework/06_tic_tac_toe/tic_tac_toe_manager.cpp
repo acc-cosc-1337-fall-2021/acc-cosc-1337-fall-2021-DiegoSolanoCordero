@@ -29,5 +29,6 @@ ostream& operator<<(std::ostream & out, const TicTacToeManager& manager)
     {
     out<<*game<<"\n";
     }
+    return out;
 }
 

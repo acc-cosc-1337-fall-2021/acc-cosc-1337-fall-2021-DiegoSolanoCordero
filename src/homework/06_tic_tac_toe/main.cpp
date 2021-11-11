@@ -28,12 +28,12 @@ int main()
 			cin>>size;
 			if (size==3)
 			{
-				instance=make_unique <Game3>();
+				instance=make_unique <TicTacToe3>();
 				size_check=2;
 			}
 			else if (size==4)
 			{
-				instance=make_unique <Game4>();
+				instance=make_unique <TicTacToe4>();
 				size_check=2;
 			}
 			else
