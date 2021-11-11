@@ -6,6 +6,7 @@
 TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
 }
+/*
 using std::cout;
 TEST_CASE("Tie") 
 {
@@ -310,3 +311,4 @@ TEST_CASE("Winner total Manager check")
 	cout<<"Test complete: "<<"\n";
 	cout<<"\n";
 }
+/*

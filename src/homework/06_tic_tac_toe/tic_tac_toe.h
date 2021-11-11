@@ -9,10 +9,12 @@ using std::ostream;
 using std::istream;
 #ifndef Tictactoe_H
 #define Tictactoe_H
-
 class TicTacToe
 {
+    
     public:
+        TicTacToe(){};
+        TicTacToe(int size):pegs(size*size," "){};
         bool game_over();
         void start_game(std::string first_player);
         void mark_board(int position);
@@ -22,15 +24,17 @@ class TicTacToe
         friend std::istream& operator>>(std::istream& in, TicTacToe& game);
     private:
         std::string player;
-        std::vector<std::string> pegs= std::vector<std::string>(9," ");
         std::string winner;
         void set_next_player();
         bool check_board_full();
         void clear_board();
-        bool check_column_win();
-        bool check_row_win();
-        bool check_diagonal_win();
-        void set_winner();
         
+        void set_winner();
+    protected:
+        std::vector<std::string> pegs;
+        bool virtual check_column_win();
+        bool virtual check_row_win();
+        bool virtual check_diagonal_win();
+
 };
 #endif
