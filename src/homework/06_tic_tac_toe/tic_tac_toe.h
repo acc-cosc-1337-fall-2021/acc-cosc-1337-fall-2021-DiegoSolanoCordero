@@ -32,9 +32,9 @@ class TicTacToe
         void set_winner();
     protected:
         std::vector<std::string> pegs;
-        bool virtual check_column_win();
-        bool virtual check_row_win();
-        bool virtual check_diagonal_win();
+        virtual bool check_column_win();
+        virtual bool check_row_win();
+        virtual bool check_diagonal_win();
 
 };
 #endif

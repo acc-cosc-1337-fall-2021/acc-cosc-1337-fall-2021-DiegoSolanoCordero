@@ -1,5 +1,5 @@
 #include "tic_tac_toe_4.h"
-
+#include "tic_tac_toe.h"
 /*
 class function check_column_win
 Win by column if and return true if (each column index)
@@ -10,7 +10,7 @@ Win by column if and return true if (each column index)
 else
 false
 */
-bool TicTacToe:: check_column_win()
+bool TicTacToe4:: check_column_win()
 {
     bool column=false;
     if (pegs[0]=="X" && pegs[4]=="X" && pegs[8]=="X" && pegs[12]=="X"||pegs[0]=="O" && pegs[4]=="O" && pegs[8]=="O" && pegs[12]=="O")
@@ -47,7 +47,7 @@ Win by row if
 8, 9, 10, 11 are equal 
 12,13,14, 15 are equal
 */
-bool TicTacToe:: check_row_win()
+bool TicTacToe4:: check_row_win()
 {
     bool row=false;
     if (pegs[0]=="X" && pegs[1]=="X" && pegs[2]=="X" && pegs[3]=="X"||pegs[0]=="O" && pegs[1]=="O" && pegs[2]=="O" && pegs[3]=="O")
@@ -84,7 +84,7 @@ Win diagonally
 12,13,14, 15
 
 */
-bool TicTacToe:: check_diagonal_win()
+bool TicTacToe4:: check_diagonal_win()
 {
     bool diagonal=false;
     if (pegs[0]=="X" && pegs[5]=="X" && pegs[10]=="X"&& pegs[15]=="X"||pegs[0]=="O" && pegs[5]=="O" && pegs[10]=="O" && pegs[15]=="O")

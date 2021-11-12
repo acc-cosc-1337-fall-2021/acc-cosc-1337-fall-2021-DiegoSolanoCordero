@@ -89,10 +89,10 @@ std::ostream& operator<<(std::ostream& out, const TicTacToe& game)
     }
     else if (game.pegs.size()==16)
     {
-        out<<"["<<game.pegs[0]<<"]"<<"["<<game.pegs[1]<<"]"<<"["<<game.pegs[2]<<"]"<<"\n"<<game.pegs[3]<<"]"<<"\n";
-        out<<"["<<game.pegs[4]<<"]"<<"["<<game.pegs[5]<<"]"<<"["<<game.pegs[6]<<"]"<<"\n"<<game.pegs[7]<<"]"<<"\n";;
-        out<<"["<<game.pegs[8]<<"]"<<"["<<game.pegs[9]<<"]"<<"["<<game.pegs[10]<<"]"<<"\n"<<game.pegs[11]<<"]"<<"\n";;
-        out<<"["<<game.pegs[12]<<"]"<<"["<<game.pegs[13]<<"]"<<"["<<game.pegs[14]<<"]"<<"\n"<<game.pegs[15]<<"]"<<"\n";;
+        out<<"["<<game.pegs[0]<<"]"<<"["<<game.pegs[1]<<"]"<<"["<<game.pegs[2]<<"]"<<"["<<game.pegs[3]<<"]"<<"\n";
+        out<<"["<<game.pegs[4]<<"]"<<"["<<game.pegs[5]<<"]"<<"["<<game.pegs[6]<<"]"<<"["<<game.pegs[7]<<"]"<<"\n";
+        out<<"["<<game.pegs[8]<<"]"<<"["<<game.pegs[9]<<"]"<<"["<<game.pegs[10]<<"]"<<"["<<game.pegs[11]<<"]"<<"\n";
+        out<<"["<<game.pegs[12]<<"]"<<"["<<game.pegs[13]<<"]"<<"["<<game.pegs[14]<<"]"<<"["<<game.pegs[15]<<"]"<<"\n";
     }
     return out;
 }
@@ -123,7 +123,10 @@ bool TicTacToe::check_board_full()
 //Set all board to empty space
 void TicTacToe::clear_board()
 {
-    pegs= std::vector<std::string>(9," "); 
+    for(auto itr: pegs )
+    {
+        itr!=" ";
+    }
 }
 //Check for column winners
 bool TicTacToe:: check_column_win()

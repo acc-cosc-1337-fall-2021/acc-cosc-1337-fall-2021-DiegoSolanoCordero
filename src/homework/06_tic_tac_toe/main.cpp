@@ -62,7 +62,7 @@ int main()
 		getout=false;
 		while (getout==false)
 		{
-			cout<<"Player:"<<instance->get_player()<<"'s turn, Select a space to fill from 1 to 9"<<"\n";
+			cout<<"Player:"<<instance->get_player()<<"'s turn"<<"\n";
 			cin>>*instance;
 			cout<<*instance;
 			getout=instance->game_over();
