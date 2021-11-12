@@ -639,7 +639,7 @@ TEST_CASE("Winner total Manager check")
 		cout<<*instance;
 	} while (instance->game_over()==false);
 	winner=instance->get_winner();
-	manager.save_game(instance);
+	manager.update_winner_count(winner);
 	instance->start_game("O");
 	instance->game_over();
 	do
@@ -657,7 +657,7 @@ TEST_CASE("Winner total Manager check")
 		cout<<*instance;
 	} while (instance->game_over()==false);
 	winner=instance->get_winner();
-	manager.save_game(instance);
+	manager.update_winner_count(winner);
 	instance->start_game("X");
 	instance->game_over();
 	do
@@ -683,7 +683,7 @@ TEST_CASE("Winner total Manager check")
 		cout<<*instance;
 	} while (instance->game_over()==false);
 	winner=instance->get_winner();
-	manager.save_game(instance);
+	manager.update_winner_count(winner);
 	manager.get_winner_total(x,o,t);
 	cout<<"X wins: "<<x<<", O wins: "<<o<<", Ties: "<<t<<"\n";
 	REQUIRE(instance->game_over()==true);
