@@ -1,6 +1,7 @@
 //cpp
 #include "tic_tac_toe.h"
 #include "tic_tac_toe_manager.h"
+#include "tic_tac_toe_data.h"
 #include <memory>
 using std::unique_ptr;
 void TicTacToeManager::save_game(unique_ptr<TicTacToe>& b)
@@ -31,4 +32,11 @@ ostream& operator<<(std::ostream & out, const TicTacToeManager& manager)
     }
     return out;
 }
-
+TicTacToeManager::TicTacToeManager(TicTacToeData Data)
+{
+    games=Data.get_games();
+}
+TicTacToeManager::~TicTacToeManager()
+{
+    Data.save_games(games);
+}

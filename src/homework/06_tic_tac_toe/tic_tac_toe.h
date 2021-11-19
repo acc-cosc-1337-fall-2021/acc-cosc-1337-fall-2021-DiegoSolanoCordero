@@ -1,6 +1,7 @@
 //h
 #include <string>
 #include <vector>
+#include <memory>
 #include <iostream>
 using namespace std;
 using std::string;
@@ -11,10 +12,11 @@ using std::istream;
 #define TicTacToe_H
 class TicTacToe
 {
-    
     public:
-        TicTacToe(){};
-        TicTacToe(int size):pegs(size*size," "){};
+        TicTacToe(){}
+        TicTacToe(int size):pegs(size*size," "){}
+        TicTacToe(std::vector<string> p, string win):pegs (p), winner(win){}
+        const std::vector<string> get_pegs();
         bool game_over();
         void start_game(std::string first_player);
         void mark_board(int position);

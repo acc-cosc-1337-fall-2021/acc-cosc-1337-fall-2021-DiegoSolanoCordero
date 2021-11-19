@@ -151,3 +151,8 @@ void TicTacToe:: set_winner()
     else if (player=="O")
     winner="X";
 }
+//Return the pegs vector
+const std::vector<string> TicTacToe::get_pegs()
+{
+    return pegs;
+}

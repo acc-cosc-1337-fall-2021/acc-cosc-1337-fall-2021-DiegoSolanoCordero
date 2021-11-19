@@ -19,6 +19,8 @@ int main()
 	std::string winner;
 	unique_ptr <TicTacToe> instance;
 	TicTacToeManager manager;
+	TicTacToeData datainstance;
+	manager.save_game(datainstance);
 	while (repeat==1)
 	{
 		int size_check=1;
